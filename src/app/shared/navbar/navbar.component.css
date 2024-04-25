@@ -1,0 +1,91 @@
+/* Initial styling for .navbar-main */
+.navbar-main {
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 78%) 53%, rgb(0 0 0 / 9%) 100%);
+  padding-bottom: 30px;
+  width: 100%;
+  z-index: 100; 
+}
+.nav-link.active {
+ text-decoration: underline; /* Change the color as needed */
+}
+.brand-logo {
+  padding-top: 20px;
+  width: 280px;
+}
+
+.navbar-nav-ul {
+  margin-left: auto;
+  padding-top: 20px;
+}
+
+/* Styling for .navbar-main when it has the headroom--not-top class */
+.navbar-main.headroom--not-top {
+  position: fixed;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 78%) 53%, rgb(0 0 0 / 9%) 100%);
+  /* Add any other styles you want */
+}
+
+.custom-toggler.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(237 47 33)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='13' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(237 47 33) !important;
+  margin-top: 20px;
+}
+
+.nav-link-text {
+  font-size: 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media screen and (max-width: 768px) {
+  .brand-logo {
+    padding-top: 10px;
+    width: 200px;
+  }
+
+  .custom-toggler.navbar-toggler {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-item::after {
+    content: " - ";
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  /* To prevent the hyphen from appearing after the last nav-item, you can use the :last-child pseudo-class */
+  .nav-item:last-child::after {
+    content: none;
+    /* Hide the hyphen after the last nav-item */
+  }
+
+}
+
+.nav-item .nav-link-inner--text:hover {
+  text-shadow: -1px 0px 0 white;
+}
+
+.custom-toggler.navbar-toggler:focus {
+  outline: none;
+  /* Remove the default focus outline */
+  box-shadow: unset;
+  border: 1px solid rgb(237 47 33) !important;
+
+}

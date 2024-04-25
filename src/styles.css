@@ -1,0 +1,16 @@
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width as needed */
+
+}
+
+/* Track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+    background: #ed2f21; /* Set the background color */
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #19352d; /* Set the thumb background color */
+    border-radius: 0; /* Adjust the border radius */
+}

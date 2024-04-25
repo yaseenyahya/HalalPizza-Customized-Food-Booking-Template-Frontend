@@ -1,0 +1,48 @@
+
+.footer-container-overlay{
+  
+    position: absolute;
+    background: #000000ad;
+    background: url("~src/assets/footer-bg.png");
+   
+    background-size: cover;
+    background-position: center;
+    background-color: #352e23;
+    padding-bottom: 100px;
+}
+.brand-logo{
+    width: 100%;
+    max-width: 400px
+}
+.navbar-brand{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    display: block;
+}
+.heading{
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+}
+.detail-text{
+    text-align: center;
+    color: #999999;
+    margin-top: 20px;
+}
+.newsletter-send-button{
+    background: #fb5756;
+    font-weight: 800;
+    padding: 0 20px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+}
+.newsletter-input{
+    margin: 0 18px;
+    padding: 12px;
+}
+.newsletter-container{
+    margin-top: 20px;
+}

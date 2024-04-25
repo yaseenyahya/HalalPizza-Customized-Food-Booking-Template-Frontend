@@ -1,0 +1,26 @@
+<nav id="navbar-main"   class="navbar navbar-dark navbar-main navbar-expand-lg navbar-transparent navbar-light">
+  <div class="container">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/']" >
+      <img class="brand-logo" src="./assets/logonav.png">
+    </a>
+<button class="custom-toggler navbar-toggler" type="button" (click)="collapsedNavbar()"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="custom-toggler navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav navbar-nav-ul navbar-nav-hover align-items-lg-center">
+        <li class="nav-item ">
+          <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }" class="nav-link no-caret" routerLinkActive="active" role="button">
+            <span class="nav-link-inner--text text-white nav-link-text" >HOME</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a routerLink="/aboutus" [routerLinkActiveOptions]="{ exact: true }" class="nav-link no-caret" routerLinkActive="active"  role="button">
+            <span class="nav-link-inner--text text-white nav-link-text" >ABOUT US</span>
+          </a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>

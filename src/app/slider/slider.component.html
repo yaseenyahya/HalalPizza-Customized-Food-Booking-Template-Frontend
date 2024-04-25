@@ -1,0 +1,10 @@
+<ngb-carousel class="carousel-fade" [interval]="2000" #myCarousel="ngbCarousel" [showNavigationArrows]="false" [showNavigationIndicators]="true" [showNavigationArrows]="true">
+  <ng-template *ngFor="let slider of sliders" ngbSlide>
+      <div [style.height.px]="windowHeight + topbarHeight" [style.background]="'url(\'' + getSliderImagePath(slider.path) + '\') center / cover'" [style.cursor]="slider.link ? 'pointer' : 'auto'" (click)="navigateToLink(slider.link)" alt="Image 1">
+      </div>
+  </ng-template>
+</ngb-carousel>
+<div *ngIf="sliders.length === 0" style="height: 40px;">
+</div>
+
+

@@ -1,0 +1,68 @@
+<div class="menu-slider-container">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="button-wrapper-left">
+            <button class="button menu-slider-left-button"  [style.visibility]="showScrollLeft ? 'visible' : 'hidden'" (click)="scrollMenuLeft()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </button>
+        </div>
+        <div class="content-wrapper" #contentWrapper>
+            <div class="content menu-item-container"  [id]="'menuItem-' + menuItem.id" attr.data-menuItemId = {{menuItem.id}} *ngFor="let menuItem of menuItems">
+                <span class="menu-item" (click)="onMenuItemClick(menuItem)"
+                    [ngClass]="{ 'selected': menuItem.selected }">{{ menuItem.name }}</span>
+            </div>
+        </div>
+        <div class="button-wrapper-right">
+            <button class="button menu-slider-right-button"  [style.visibility]="showScrollRight ? 'visible' : 'hidden'"  (click)="scrollMenuRight()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<app-dealsslider></app-dealsslider>
+<div #contentItemsWrapper>
+<div *ngFor="let menuItem of menuItems" [id]="'menuSection-' + menuItem.id" attr.data-sectionMenuItemId = {{menuItem.id}} class="menu-list-container container">
+    <div class="menu-list-title">{{ menuItem.name }}</div>
+    <div *ngIf="hasItems(menuItem.id)" class="menu-list">
+        <div class="row gx-5 gy-5 section-row" >
+            <div class="col-lg-6 col-xs-12 col-sm-12 col-md-12" *ngFor="let item of getItemsByMenuItemId(menuItem.id)">
+                <div class="row menu-list-item" (click)="openModal(item)">
+                    <div class="col-lg-4 col-xs-12 col-sm-12 col-md-12 d-flex justify-content-center align-items-center">
+                        <img src="{{getImagePath(item.productImagePath)}}" />
+                       
+                        </div>
+                       
+                        <div class="col-lg-8 col-xs-12 col-sm-12 col-md-12">
+                            <div class="menu-list-item-content">
+                            <div class="menu-list-item-title">{{ item.productTitle }}</div>
+                            <div class="menu-list-item-details">{{ item.productDetails }}</div>
+                            <div class="menu-list-item-price-container">
+                                <div class="menu-list-item-price-border" [ngStyle]="{'width': item.productSalePrice ? '240px' : 'auto'}">
+                                    <span class="menu-list-item-price-discounted" *ngIf="item.productSalePrice">${{ item.productSalePrice }}</span>
+                                    <span class="menu-list-item-price" *ngIf="item.productSalePrice">${{ item.productPrice }}</span>
+                                    <span class="menu-list-item-price-discounted" *ngIf="!item.productSalePrice">${{ item.productPrice }}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div *ngIf="productsLoading; else noItemAvailable">...Loading</div>
+    <ng-template #noItemAvailable>
+    <div  *ngIf="!hasItems(menuItem.id)">No items available</div>
+</ng-template>
+</div>
+</div>

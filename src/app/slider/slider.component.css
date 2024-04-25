@@ -1,0 +1,31 @@
+.carousel-item {
+    display: block !important;
+    
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    transition-delay: 0.25s;
+  
+}
+.carousel-fade{
+    
+    
+  
+    width: 100%;
+}
+.carousel-item.carousel-item-left,
+.carousel-item.carousel-item-right {
+    position: relative;
+    opacity: 1;
+}
+
+.carousel-item.active {
+    z-index: 1;
+    opacity: 1; 
+    transition-delay: 0s;       
+}
+
+.carousel-item.active.carousel-item-left,
+.carousel-item.active.carousel-item-right {
+    opacity: 0;
+    transform: unset;
+}
