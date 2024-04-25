@@ -1,27 +1,34 @@
-# Halalpizza
+# HalalPizza - Customized Food Booking Template (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+HalalPizza is a fully customized food booking template built using Angular for the frontend, .NET 7 for the backend, and React for the admin panel. It also includes an Indolj menu slider for an enhanced user experience.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular Frontend:** User-friendly interface developed with Angular framework for smooth navigation and seamless user experience.
+  
+- **.NET 7 Backend:** Robust backend powered by .NET 7, ensuring reliability, security, and scalability for handling food bookings and transactions.
 
-## Code scaffolding
+- **React Admin Panel:** Easy-to-use admin panel built with React, allowing administrators to manage orders, menus, and user accounts efficiently.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Indolj Menu Slider:** Enhanced user experience with the inclusion of Indolj menu slider, enabling users to browse through menu items conveniently.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+Once the application is up and running, users can:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Browse through the menu items.
+- Place orders for their favorite dishes.
+- Administer the system through the React admin panel.
+- Manage menus, orders, and user accounts efficiently.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Acknowledgements
 
-## Further help
+- Indolj for providing the menu slider component.
+- Angular, .NET, and React communities for their valuable contributions and support.
+- Contributors to this project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+
+For any inquiries or support, feel free to contact us at [yaseenyahya021@gmail.com](mailto:yaseenyahya021@gmail.com).
